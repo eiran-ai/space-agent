@@ -6,28 +6,28 @@ const nextConfig = {
         source: "/api/:path*",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/api/:path*"
+            ? "http://127.0.0.1:8002/api/:path*"
             : "/api/",
       },
       {
         source: "/static/:path*",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/static/:path*"
+            ? "http://127.0.0.1:8002/static/:path*"
             : "/static/:path*",
       },
       {
         source: "/docs",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/docs"
+            ? "http://127.0.0.1:8002/docs"
             : "/api/docs",
       },
       {
         source: "/openapi.json",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/openapi.json"
+            ? "http://127.0.0.1:8002/openapi.json"
             : "/api/openapi.json",
       },
     ];
