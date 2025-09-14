@@ -38,9 +38,9 @@ export const Overview = () => {
         <div className="text-left text-sm mx-auto">
           <div className="font-medium mb-1">Ideas to try</div>
           <ul className="list-disc list-outside ml-5 space-y-1">
-            <li>"What stands out in this port image?"</li>
-            <li>"Summarize detected objects and likely activity."</li>
-            <li>"Compare this area to earlier images and describe changes."</li>
+            <li>&quot;What stands out in this port image?&quot;</li>
+            <li>&quot;Summarize detected objects and likely activity.&quot;</li>
+            <li>&quot;Compare this area to earlier images and describe changes.&quot;</li>
           </ul>
         </div>
 
