@@ -1,34 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   rewrites: async () => {
+    const backend = process.env.BACKEND_ORIGIN || (process.env.NODE_ENV === "development" ? "http://127.0.0.1:8002" : "http://127.0.0.1:8002");
     return [
       {
         source: "/api/:path*",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "https://space.abn.rw/api/:path*"
-            : "/api/",
+        destination: `${backend}/api/:path*`,
       },
       {
         source: "/static/:path*",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "https://space.abn.rw/static/:path*"
-            : "/static/:path*",
+        destination: `${backend}/static/:path*`,
       },
       {
         source: "/docs",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "https://space.abn.rw/docs"
-            : "/api/docs",
+        destination: `${backend}/docs`,
       },
       {
         source: "/openapi.json",
-        destination:
-          process.env.NODE_ENV === "development"
-            ? "https://space.abn.rw/openapi.json"
-            : "/api/openapi.json",
+        destination: `${backend}/openapi.json`,
       },
     ];
   },
