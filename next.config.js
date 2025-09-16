@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   rewrites: async () => {
-    const backend = process.env.BACKEND_ORIGIN || (process.env.NODE_ENV === "development" ? "http://127.0.0.1:8002" : "http://127.0.0.1:8002");
+    const backend = process.env.BACKEND_ORIGIN || (process.env.NODE_ENV === "development" ? "http://127.0.0.1:8002" : "https://space.abn.rw");
     return [
       {
         source: "/api/:path*",
